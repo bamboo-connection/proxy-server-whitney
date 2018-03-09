@@ -1,1 +1,1 @@
-# proxy-server-whitney
+# WeGot-WhitneyProxy
