@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  gallery:
+    build: gallery/
+    depends_on:
+      - 'database'
+    ports:
+      - '3001:3001'
+
+  # overview:
+  #   build: overview/
+  #   depends_on:
+  #     - 'database'
+  #   ports:
+  #     - '3002:3002'
+  #
+  # sidebar:
+  #   build: map-side-bar/
+  #   depends_on:
+  #     - 'database'
+  #   ports:
+  #     - '3003:3003'
+  #
+  # recommendations:
+  #   build: recommendations/
+  #   depends_on:
+  #     - 'database'
+  #   ports:
+  #     - '3004:3004'
+
+  database:
+    image: mongo:latest
